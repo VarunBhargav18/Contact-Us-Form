@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - [Your Website Name]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-overlay">
+            <h1>Contact Us</h1>
+            <p>We're Here to Help You Succeed</p>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="/submit-contact-form" method="POST">
+
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="partnership">Partnerships</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="additional-info">
+            <h3>Frequently Asked Questions</h3>
+            <p><strong>How accurate is the college predictor?</strong> Our predictions are based on historical data,
+                giving you the best guidance possible.</p>
+            <div class="faq">
+                <div class="faq-item">
+                    <h4>What services does [Your Website Name] offer? <span>&#x25BC;</span></h4>
+                    <p>We provide data-driven college predictions, guidance on admissions, and insights to help students
+                        make informed choices.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How can I contact support? <span>&#x25BC;</span></h4>
+                    <p>You can contact us via email at support@[yourwebsitename].com or through our social media
+                        channels.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is [Your Website Name] free to use? <span>&#x25BC;</span></h4>
+                    <p>Yes, our platform is free for students seeking college admission guidance and predictions.</p>
+                </div>
+            </div>
+            <p><strong>What are your support hours?</strong> Monday - Friday, 9 AM - 6 PM.</p>
+
+            <h3>Follow Us</h3>
+            <p>Stay connected with us on social media for updates and tips:</p>
+            <p>
+                <a href="https://facebook.com">Facebook</a> |
+                <a href="https://twitter.com">Twitter</a> |
+                <a href="https://linkedin.com">LinkedIn</a>
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 [Your Website Name]. All rights reserved. | <a href="/privacy-policy">Privacy Policy</a></p>
+    </footer>
+    <script>
+        document.querySelectorAll('.faq-item h4').forEach(item => {
+            item.addEventListener('click', () => {
+                const faqItem = item.parentElement;
+
+                // Toggle 'open' class for the clicked FAQ item
+                faqItem.classList.toggle('open');
+
+                // Close other FAQ items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== faqItem) {
+                        otherItem.classList.remove('open');
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
